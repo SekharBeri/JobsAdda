@@ -1,0 +1,12 @@
+<h2>New Job</h2>
+<%= form_for @job do |job| %>
+  <%= job.label :title %><br/>
+  <%= job.text_field :title %><br/>
+  <%= job.label :description %><br/>
+  <%= job.text_area :description %><br/>
+  <%= job.label :skills %><br/>
+  <%= job.text_area :skills %><br/>
+  <%= job.label :experience %><br/>
+  <%= job.number_field :experience %><br/>
+  <%= job.submit 'create job' %>
+<% end %>

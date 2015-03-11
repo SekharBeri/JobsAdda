@@ -1,0 +1,9 @@
+<div class="search">
+  <form class="form-horizontal">
+    <div class="from-group">
+    <input type="text" class="form-control span3" placeholder="search by skills">
+    <input type="text" class="form-control span3" placeholder="search by Location">
+    <input type="text" class="form-control span3" placeholder="search by Experience">
+    <button class="btn btn-info">Search Here</button>
+  </form>
+</div>

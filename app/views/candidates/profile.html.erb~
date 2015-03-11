@@ -1,0 +1,14 @@
+<h1>Candidate Profile</h1>
+
+
+<%= @candidate.first_name %>&nbsp &nbsp
+<%= @candidate.last_name %>&nbsp &nbsp
+<%= @candidate.email %>&nbsp &nbsp
+<%= link_to 'signout', candidates_signout_path %>
+<hr>
+<br>
+<h3> Total No of Applied Jobs </h3>
+
+<%=  @jobs_count %>
+
+

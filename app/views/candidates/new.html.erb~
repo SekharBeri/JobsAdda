@@ -1,0 +1,14 @@
+<h1>SignUP Now!!</h1>
+<%= form_for @candidate do |c| %>
+  <%= c.label :first_name %><br>
+  <%= c.text_field :first_name %><br>
+  <%= c.label :last_name %><br>
+  <%= c.text_field :last_name %><br>
+  <%= c.label :email %><br>
+  <%= c.text_field :email %><br>
+  <%= c.label :password %><br>
+  <%= c.password_field :password %><br>
+  <%= c.label :confirm_password %><br>
+  <%= c.password_field :confirmation_password %><br>
+  <%= c.submit  %>
+<% end %>
