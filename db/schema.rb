@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20140626061457) do
     t.text     "description"
     t.text     "skills"
     t.integer  "experience"
+    t.string   "location"
+    t.string   "company_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

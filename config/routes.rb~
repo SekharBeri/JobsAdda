@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-root "candidates#signup"      
+root "jobs#index"      
 get 'candidates/signup'
 post 'candidates/signup_create'
 get 'jobs/new'

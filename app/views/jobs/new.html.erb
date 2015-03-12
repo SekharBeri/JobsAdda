@@ -1,12 +1,36 @@
-<h2>New Job</h2>
-<%= form_for @job do |job| %>
-  <%= job.label :title %><br/>
-  <%= job.text_field :title %><br/>
-  <%= job.label :description %><br/>
-  <%= job.text_area :description %><br/>
-  <%= job.label :skills %><br/>
-  <%= job.text_area :skills %><br/>
-  <%= job.label :experience %><br/>
-  <%= job.number_field :experience %><br/>
-  <%= job.submit 'create job' %>
-<% end %>
+<div class="container">
+    <div class="panel panel-info">
+      <div class="panel-heading">New Job</div>
+      <div class="panel-body">
+        <%= form_for @job, class: "form-horizontal" do |job| %>
+          <div class="form-group">
+            <label for="title">Title</label>
+            <%= job.text_field :title, class: "form-control", placeholder: "Please Enter Job Title"%>
+          </div>
+          <div class="form-group">
+            <label for="description">Descrioption</label>
+            <%= job.text_area :description, placeholder: "Please Enter Job Description", style: "margin: 0px 0px 10px; width: 1110px; height: 98px;"%>
+          </div>
+          <div class="form-group">
+            <label for="skills">Skills</label>
+            <%= job.text_field :skills, class: "form-control", placeholder: "Please Enter skills"%>
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="experience">Experience</label>
+            <%= job.text_field :experience, class: "form-control span4", placeholder: "Please Enter Experience"%>
+          </div>
+          <div class="form-group col-lg-6">
+            <label for="location">Loacation</label>
+            <%= job.text_field :location, class: "form-control span4", placeholder: "Please Enter Location"%>
+          </div>
+          <div class="form-group">
+            <label for="company">Company Name</label>
+            <%= job.text_field :company_name, class: "form-control", placeholder: "Please Enter skills"%>
+          </div>
+          <div class="form-group">
+            <%= job.submit 'create job', class: "btn btn-primary pull-right" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+</div>
