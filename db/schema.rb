@@ -11,16 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140626061457) do
+ActiveRecord::Schema.define(version: 20150312093834) do
 
   create_table "candidates", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
     t.string   "password"
-    t.string   "confirmation_password"
+    t.string   "password_confirmation"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
   create_table "candidates_jobs", force: true do |t|

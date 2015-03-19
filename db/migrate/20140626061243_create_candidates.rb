@@ -5,7 +5,7 @@ class CreateCandidates < ActiveRecord::Migration
       t.string :last_name
       t.string :email
       t.string :password
-      t.string :confirmation_password
+      t.string :password_confirmation
 
       t.timestamps
     end

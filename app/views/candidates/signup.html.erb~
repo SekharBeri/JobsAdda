@@ -22,7 +22,7 @@
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Re Enter Password</label>
-              <%= c.password_field :confirmation_password, class: "form-control", placeholder: "Re Enter Password" %>
+              <%= c.password_field :password_confirmation, class: "form-control", placeholder: "Re Enter Password" %>
             </div>
             <div class="form-group">
               <%= c.submit "signup", class: "btn btn-primary pull-right" %>

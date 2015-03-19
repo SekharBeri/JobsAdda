@@ -5,7 +5,7 @@ class CandidatesController < ApplicationController
   end
   def signup_create
     if request.post?
-      @candidate = Candidate.new(params[:candidate].permit(:first_name, :last_name, :email, :password, :confirmation_password))
+      @candidate = Candidate.new(params[:candidate].permit(:first_name, :last_name, :email, :password, :password_confirmation))
      if @candidate.save
       redirect_to "/signin"
      else
@@ -15,8 +15,8 @@ class CandidatesController < ApplicationController
   end   
   def signin
     if request.post?
-      @candidate = Candidate.authenticate(params[:candidate][:email],params[:candidate][:password])
-      if @candidate
+      @candidate = Candidate.find_by(email: params[:candidate][:email])
+      if @candidate && @candidate.authenticate(params[:candidate][:password])
        session[:candidate] = @candidate.id
        redirect_to "/jobs"
        else
